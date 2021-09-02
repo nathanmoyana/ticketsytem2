@@ -1,3 +1,4 @@
+import 'package:file_picker_cross/file_picker_cross.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'view_ticket.dart';
@@ -31,6 +32,17 @@ class MainCreateTicket extends StatefulWidget {
 }
 
 class CreateTicket extends State<MainCreateTicket> {
+  //file upload
+  Future UploadFile() async {
+    FilePickerCross myFile = await FilePickerCross.importFromStorage(
+        type: FileTypeCross.any, fileExtension: 'txt, md');
+    myFile.saveToPath(path: '/myfiles');
+
+    myFile.exportToStorage();
+
+    myFile.exportToStorage(subject: 'File', text: 'Here is the file');
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -139,6 +151,18 @@ class CreateTicket extends State<MainCreateTicket> {
               onChanged: (value) => status = value,
             ),
           ),
+          new Container(
+              margin: new EdgeInsets.fromLTRB(80, 0, 80, 0),
+              padding: new EdgeInsets.all(10),
+              child: RaisedButton(
+                color: Colors.blue,
+                textColor: Colors.white,
+                padding: EdgeInsets.all(30),
+                child: Text('Upload File'),
+                onPressed: () {
+                  UploadFile();
+                },
+              )),
           new Container(
             margin: new EdgeInsets.fromLTRB(80, 0, 80, 0),
             padding: new EdgeInsets.all(10),
