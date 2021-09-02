@@ -47,7 +47,8 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                  labelText: (widget.ticketNumber.toUpperCase())),
+                  labelText:
+                      ('Ticket Number : ' + widget.ticketNumber.toUpperCase())),
             ),
           ),
           new Container(
@@ -55,7 +56,7 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.urgentLevel.toUpperCase(),
+                labelText: 'Urgent Level : ' + widget.urgentLevel.toUpperCase(),
               ),
             ),
           ),
@@ -64,7 +65,7 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.name.toUpperCase(),
+                labelText: 'Name : ' + widget.name.toUpperCase(),
               ),
             ),
           ),
@@ -73,7 +74,7 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.surname.toUpperCase(),
+                labelText: 'Surname : ' + widget.surname.toUpperCase(),
               ),
             ),
           ),
@@ -82,7 +83,7 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.email.toUpperCase(),
+                labelText: 'Email : ' + widget.email.toUpperCase(),
               ),
             ),
           ),
@@ -91,7 +92,7 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.request.toUpperCase(),
+                labelText: 'Request : ' + widget.request.toUpperCase(),
               ),
             ),
           ),
@@ -100,7 +101,8 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.description.toUpperCase(),
+                labelText:
+                    'Problem Description : ' + widget.description.toUpperCase(),
               ),
             ),
           ),
@@ -109,7 +111,7 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.company.toUpperCase(),
+                labelText: 'Company Name : ' + widget.company.toUpperCase(),
               ),
             ),
           ),
@@ -118,7 +120,7 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.branch.toUpperCase(),
+                labelText: 'Branch Name : ' + widget.branch.toUpperCase(),
               ),
             ),
           ),
@@ -127,7 +129,7 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.grade.toUpperCase(),
+                labelText: 'Grade : ' + widget.grade.toUpperCase(),
               ),
             ),
           ),
@@ -136,7 +138,7 @@ class ViewTicket extends State<MainViewTicket> {
             padding: new EdgeInsets.all(10),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: widget.status.toUpperCase(),
+                labelText: 'Assignment Status : ' + widget.status.toUpperCase(),
               ),
             ),
           ),
@@ -151,7 +153,7 @@ class ViewTicket extends State<MainViewTicket> {
               height: 50,
               color: Colors.black,
               child: Text(
-                'SUBMIT',
+                'SAVE',
                 style: TextStyle(
                   color: Colors.white,
                 ),
