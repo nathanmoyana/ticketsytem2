@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'create_ticket.dart';
 import 'signup.dart';
+import 'drawer.dart';
 
 class MainLoginPage extends StatefulWidget {
   @override
@@ -69,7 +70,7 @@ class LoginPage extends State<MainLoginPage> {
             margin: EdgeInsets.fromLTRB(120, 0, 0, 0),
             child: Row(
               children: <Widget>[
-                Text("Don't have an account?"),
+                Text("Don't have an account?  "),
                 RichText(
                   text: TextSpan(children: <TextSpan>[
                     TextSpan(
@@ -96,10 +97,8 @@ class LoginPage extends State<MainLoginPage> {
                   _username.text.isEmpty ? _validate = false : _validate = true;
                 });
                 _username.text.isNotEmpty && _password.text.isNotEmpty
-                    ? Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => MainCreateTicket()))
+                    ? Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MainDrawer()))
                     : null;
               },
               height: 50,

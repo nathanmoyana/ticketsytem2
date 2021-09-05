@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_system/widgets/NavigationDrawerWidget.dart';
 import 'login.dart';
-import 'package:flutter/gestures.dart';
+import 'TicketList.dart';
 
 class MainViewTicket extends StatefulWidget {
   final String ticketNumber;
@@ -36,6 +37,7 @@ class MainViewTicket extends StatefulWidget {
 class ViewTicket extends State<MainViewTicket> {
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: NavigationDrawerWidget(),
       appBar: AppBar(
         title: Text('View Ticket Page'),
         backgroundColor: Colors.black,
@@ -148,7 +150,7 @@ class ViewTicket extends State<MainViewTicket> {
             child: MaterialButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MainLoginPage()));
+                    MaterialPageRoute(builder: (context) => MainTicketList()));
               },
               height: 50,
               color: Colors.black,

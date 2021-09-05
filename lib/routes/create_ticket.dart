@@ -1,6 +1,7 @@
 import 'package:file_picker_cross/file_picker_cross.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ticket_system/widgets/NavigationDrawerWidget.dart';
 import 'view_ticket.dart';
 
 String ticketNumber = '';
@@ -45,6 +46,7 @@ class CreateTicket extends State<MainCreateTicket> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: NavigationDrawerWidget(),
       appBar: AppBar(
         title: Text('Ticket Page'),
         backgroundColor: Colors.black,

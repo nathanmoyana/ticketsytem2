@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_system/widgets/NavigationDrawerWidget.dart';
 import 'login.dart';
 import 'create_ticket.dart';
 
@@ -10,6 +11,7 @@ class MainSignUp extends StatefulWidget {
 class SignUp extends State<MainSignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: NavigationDrawerWidget(),
       appBar: AppBar(
         title: Text('Login Page'),
       ),
